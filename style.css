@@ -1,0 +1,11 @@
+html,
+body {
+  height: 100%; /* 讓頁面高度佔滿整個視窗 */
+  margin: 0; /* 移除預設邊距避免背景空白 */
+}
+
+body {
+  background: url("images/history.png") no-repeat center center fixed;
+  /* 指定背景圖片路徑,避免圖片重複平鋪,圖片置中顯示,背景固定不隨捲動移動 */
+  background-size: 100%100%; /* 寬度和高度都跟著視窗大小改變 */
+}

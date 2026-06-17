@@ -8,4 +8,16 @@ body {
   background: url("images/history.png") no-repeat center center fixed;
   /* 指定背景圖片路徑,避免圖片重複平鋪,圖片置中顯示,背景固定不隨捲動移動 */
   background-size: 100%100%; /* 寬度和高度都跟著視窗大小改變 */
+  display: flex; /* 彈性排版 */
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+}
+
+.main-box {
+  background: rgba(0, 0, 0, 0.65); /* 紅,綠,藍,透明度 */
+  border-radius: 20px; /* 邊角圓弧化 */
+  text-align: center; /* 文字置中 */
+  width: 60vw; /* 寬度佔視窗的60% */
+  height: 55vh; /* 高度佔視窗的55% */
+  padding: 2rem; /* 內距,增加內容與邊框的距離 */
 }

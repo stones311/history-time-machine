@@ -17,7 +17,53 @@ body {
   background: rgba(0, 0, 0, 0.65); /* 紅,綠,藍,透明度 */
   border-radius: 20px; /* 邊角圓弧化 */
   text-align: center; /* 文字置中 */
-  width: 60vw; /* 寬度佔視窗的60% */
-  height: 55vh; /* 高度佔視窗的55% */
   padding: 2rem; /* 內距,增加內容與邊框的距離 */
+  width: clamp(300px, 60vw, 800px);
+  min-height: 30vh; /* 最小高度佔視窗的60% */
+  height: auto; /* 高度自動調整 */
+}
+
+.main-box .title {
+  font-size: clamp(4rem, 7vw, 5rem); /* 字體大小隨視窗大小變化*/
+  letter-spacing: 6px; /* 字距 */
+  color: #d8b06a; /* 字體顏色 */
+  position: relative; /* 相對定位 */
+  margin-top: 1.5rem; /* 與框頂端距離 */
+  margin-bottom: 1rem; /* 與下一段文字距離 */
+}
+
+.main-box .wordone {
+  color: white; /* 字體顏色 */
+  font-size: clamp(2rem, 3vw, 2rem); /* 字體大小隨視窗大小變化*/
+  letter-spacing: 0; /* 字距 */
+  position: relative; /* 相對定位 */
+  margin-top: 0.5rem; /* 與標題距離 */
+  margin-bottom: 0.3rem; /* 與下一段文字距離 */
+}
+
+.main-box .wordtwo {
+  color: #e8e1d0b5; /* 字體顏色 */
+  font-size: clamp(0.5rem, 2vw, 1rem); /* 字體大小隨視窗大小變化*/
+  letter-spacing: 6px; /* 字距 */
+  position: relative; /* 相對定位 */
+  margin-top: 0; /* 緊貼上一段 */
+  margin-bottom: 1rem; /* 與按鈕距離 */
+}
+
+.main-box .btn {
+  background-color: #d8a24a; /* 按鈕背景顏色 */
+  color: black; /* 按鈕文字顏色 */
+  border: none; /* 移除按鈕邊框 */
+  letter-spacing: 1px; /* 字距 */
+  border-radius: 8px; /* 按鈕邊角圓弧化 */
+  padding: 1rem 2rem; /* 按鈕內距 */
+  font-size: clamp(1rem, 2vw, 2rem); /* 按鈕文字大小隨視窗大小變化*/
+  cursor: pointer; /* 滑鼠移到按鈕上時變成手指圖示 */
+  position: relative; /* 相對定位 */
+  margin-top: 1rem; /* 與文字距離 */
+  margin-bottom: 1rem; /* 與框底保持空間 */
+}
+
+.main-box .btn i {
+  margin-right: 0.5rem; /* 圖標與文字間距 */
 }

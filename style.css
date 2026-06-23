@@ -17,10 +17,15 @@ body {
   background: rgba(0, 0, 0, 0.65); /* 紅,綠,藍,透明度 */
   border-radius: 20px; /* 邊角圓弧化 */
   text-align: center; /* 文字置中 */
+  width: 60vw; /* 寬度為視窗寬度的60% */
+  min-height: 55vh; /* 最小高度為視窗高度的55% */
   padding: 2rem; /* 內距,增加內容與邊框的距離 */
-  width: clamp(300px, 60vw, 800px);
-  min-height: 30vh; /* 最小高度佔視窗的60% */
-  height: auto; /* 高度自動調整 */
+  transform-origin: center; /* 以黑框中心為縮放基準 */
+
+  display: flex; /* 啟用彈性排版 */
+  flex-direction: column; /* 垂直排列內容 */
+  justify-content: center; /* 垂直置中 */
+  align-items: center; /* 水平置中 */
 }
 
 .main-box .title {
@@ -28,7 +33,7 @@ body {
   letter-spacing: 6px; /* 字距 */
   color: #d8b06a; /* 字體顏色 */
   position: relative; /* 相對定位 */
-  margin-top: 1.5rem; /* 與框頂端距離 */
+  margin-top: 0; /* 與框頂端距離 */
   margin-bottom: 1rem; /* 與下一段文字距離 */
 }
 

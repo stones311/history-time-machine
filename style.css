@@ -4,8 +4,17 @@ body {
   margin: 0; /* 移除預設邊距避免背景空白 */
 }
 
-body {
+body.home {
   background: url("images/history.png") no-repeat center center fixed;
+  /* 指定背景圖片路徑,避免圖片重複平鋪,圖片置中顯示,背景固定不隨捲動移動 */
+  background-size: 100%100%; /* 寬度和高度都跟著視窗大小改變 */
+  display: flex; /* 彈性排版 */
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+}
+
+body.history {
+  background: url("images/history2.png") no-repeat center center fixed;
   /* 指定背景圖片路徑,避免圖片重複平鋪,圖片置中顯示,背景固定不隨捲動移動 */
   background-size: 100%100%; /* 寬度和高度都跟著視窗大小改變 */
   display: flex; /* 彈性排版 */
@@ -67,6 +76,7 @@ body {
   position: relative; /* 相對定位 */
   margin-top: 1rem; /* 與文字距離 */
   margin-bottom: 1rem; /* 與框底保持空間 */
+  text-decoration: none; /* 移除超連結底線 */
 }
 
 .main-box .btn i {

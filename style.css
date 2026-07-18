@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%; /* 讓頁面高度佔滿整個視窗 */
-  margin: 0; /* 移除預設邊距避免背景空白 */
+  margin: 0; /* 移除頁面預設邊距 */
 }
 
 body.home {
@@ -81,4 +81,19 @@ body.history {
 
 .main-box .btn i {
   margin-right: 0.5rem; /* 圖標與文字間距 */
+}
+
+body.history .btn {
+  background-color: #f3c888; /* 按鈕背景顏色 */
+  color: #4a3422; /* 按鈕文字顏色 */
+  border: none; /* 移除按鈕邊框 */
+  letter-spacing: 1px; /* 字距 */
+  border-radius: 999px; /* 按鈕邊角圓弧化 */
+  padding: 0.5rem 1rem; /* 按鈕內距 */
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* 按鈕文字大小隨視窗大小變化*/
+  cursor: pointer; /* 滑鼠移到按鈕上時變成手指圖示 */
+  position: absolute; /* 絕對定位 */
+  top: 25px; /* 距離上方 */
+  left: 25px; /* 距離左方 */
+  text-decoration: none; /* 移除超連結底線 */
 }

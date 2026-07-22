@@ -17,6 +17,13 @@ async function getHistoryDate() {
   //組合出維基百科要的網址(用反單引號包裹)
 
   console.log(apiUrl); //在控制台印出apiUrl
+
+  const formattedText = `${today.getFullYear()}年${month}月${date}日`;
+  //組合出要顯示的文字,不補零
+  const dateBox = document.getElementById("today-date");
+  //抓取id為today-date的元素,並存進dateBox變數
+  dateBox.innerHTML = `<i class="fa-solid fa-calendar"></i> ${formattedText}`;
+  //把組合好的文字放進dateBox裡
 }
 
 getHistoryDate(); //呼叫函式,讓它執行

@@ -30,7 +30,6 @@ body.history {
   min-height: 55vh; /* 最小高度為視窗高度的55% */
   padding: 2rem; /* 內距,增加內容與邊框的距離 */
   transform-origin: center; /* 以黑框中心為縮放基準 */
-
   display: flex; /* 啟用彈性排版 */
   flex-direction: column; /* 垂直排列內容 */
   justify-content: center; /* 垂直置中 */
@@ -96,4 +95,50 @@ body.history .btn {
   top: 25px; /* 距離上方 */
   left: 25px; /* 距離左方 */
   text-decoration: none; /* 移除超連結底線 */
+}
+
+body.history {
+  display: flex; /* 啟用彈性排版 */
+  flex-direction: column; /* 垂直排列內容 */
+  align-items: center; /* 水平置中 */
+  justify-content: flex-start; /* 垂直置頂 */
+  min-height: 100vh; /* 最小高度為視窗高度 */
+}
+
+.second-box {
+  text-align: center; /* 文字置中 */
+  margin-top: 1rem; /* 與上方按鈕距離 */
+  margin-bottom: 2rem; /* 與下方內容距離 */
+  color: #4a3422; /* 文字顏色 */
+  max-width: 600px; /* 最大寬度限制，避免文字過長 */
+  letter-spacing: 1px; /* 字距 */
+}
+
+.second-box .title {
+  font-size: clamp(3rem, 4vw, 3.5rem); /* 字體大小隨視窗大小變化*/
+  margin-bottom: 0rem; /* 與下一段文字距離 */
+  letter-spacing: 5px; /* 字距 */
+}
+
+.second-box .wordone {
+  font-size: clamp(0.8rem, 1vw, 1rem); /* 字體大小隨視窗大小變化*/
+  color: #6a4c2f; /* 文字顏色 */
+  letter-spacing: 1px; /* 字距 */
+  margin-bottom: 1rem; /* 與下一段文字距離 */
+}
+
+.second-box #today-date {
+  font-size: clamp(1.2rem, 2vw, 1.4rem); /* 字體大小隨視窗大小變化*/
+  color: #4a3422; /* 文字顏色 */
+  margin-bottom: 0rem; /* 與下一段文字距離 */
+  padding: 0.5rem 0.5rem; /* 內距 */
+  border: 0.5px solid black; /* 框線 */
+  border-radius: 8px; /* 框線圓角化 */
+  letter-spacing: 1px; /* 字距 */
+}
+
+.second-box .wordtwo {
+  font-size: clamp(0.8rem, 1vw, 1rem); /* 字體大小隨視窗大小變化*/
+  color: #5a3d28; /* 文字顏色 */
+  letter-spacing: 1px; /* 字距 */
 }

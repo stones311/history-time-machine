@@ -116,7 +116,7 @@ body.history {
 
 .second-box .title {
   font-size: clamp(3rem, 4vw, 3.5rem); /* 字體大小隨視窗大小變化*/
-  margin-bottom: 0rem; /* 與下一段文字距離 */
+  margin-bottom: -15px; /* 與下一段文字距離 */
   letter-spacing: 5px; /* 字距 */
 }
 
@@ -124,13 +124,13 @@ body.history {
   font-size: clamp(0.8rem, 1vw, 1rem); /* 字體大小隨視窗大小變化*/
   color: #6a4c2f; /* 文字顏色 */
   letter-spacing: 1px; /* 字距 */
-  margin-bottom: 1rem; /* 與下一段文字距離 */
+  margin-bottom: 5px; /* 與下一段文字距離 */
 }
 
 .second-box #today-date {
   font-size: clamp(1.2rem, 2vw, 1.4rem); /* 字體大小隨視窗大小變化*/
   color: #4a3422; /* 文字顏色 */
-  margin-bottom: 0rem; /* 與下一段文字距離 */
+  margin-bottom: -5px; /* 與下一段文字距離 */
   padding: 0.5rem 0.5rem; /* 內距 */
   border: 0.5px solid black; /* 框線 */
   border-radius: 8px; /* 框線圓角化 */
@@ -141,4 +141,22 @@ body.history {
   font-size: clamp(0.8rem, 1vw, 1rem); /* 字體大小隨視窗大小變化*/
   color: #5a3d28; /* 文字顏色 */
   letter-spacing: 1px; /* 字距 */
+  margin-bottom: -25px; /* 與下一段文字距離 */
+}
+
+#events-container {
+  display: flex; /* 啟用彈性排版 */
+  flex-direction: column; /* 垂直排列內容 */
+  gap: -20rem; /* 框之間的間距 */
+  width: 100%; /* 佔滿父容器的寬度 */
+}
+
+.event-card {
+  width: 90%; /* 框的寬度為父容器的90% */
+  max-width: 820px; /* 框的最大寬度限制 */
+  box-sizing: border-box; /* 包含內距和邊框在內的總寬度 */
+  height: 100px; /* 框的高度 */
+  background: #efdfb9; /* 框的背景顏色 */
+  border-radius: 20px; /* 框的邊角圓弧化 */
+  margin: 6px auto; /* 框的上下間距為6px，並水平置中 */
 }

@@ -159,4 +159,5 @@ body.history {
   background: #efdfb9; /* 框的背景顏色 */
   border-radius: 20px; /* 框的邊角圓弧化 */
   margin: 6px auto; /* 框的上下間距為6px，並水平置中 */
+  padding: 1rem; /* 框的內距 */
 }

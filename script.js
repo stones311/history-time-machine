@@ -3,7 +3,7 @@ async function getHistoryDate() {
   const month = String(today.getMonth() + 1).padStart(2, "0"); // 取得月份，並補零
   const date = String(today.getDate()).padStart(2, "0"); // 取得日期，並補零
 
-  const apiUrl = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${date}`;
+  const apiUrl = `https://api.wikimedia.org/feed/v1/wikipedia/zh/onthisday/all/${month}/${date}`;
   // API URL，使用月份和日期作為參數
 
   const formattedText = `${today.getFullYear()}年${today.getMonth() + 1}月${today.getDate()}日`;
@@ -16,19 +16,19 @@ async function getHistoryDate() {
     const response = await fetch(apiUrl); // 發送 GET 請求到 API
     const data = await response.json(); // 解析回傳的 JSON 資料
 
-    const events = data.events.slice(0, 5); // 取得前五個事件紀錄
+    const events = data.events.slice(0, 5).sort((a, b) => a.year - b.year); // 取得前五個事件，並依年份排序
     const eventBox = document.getElementById("history-events"); // 取得事件列表的容器元素
 
     if (events.length > 0) {
       // 如果有事件紀錄，則將其插入到容器中
       eventBox.innerHTML = events
         .map(
-          (
-            event, // 將每個事件轉換為 HTML 列表項
-          ) =>
-            `<li>${event.year}年 - ${event.text} 
-              <a href="${event.pages[0].content_urls.desktop.page}" target="_blank">更多</a> 
-            </li>`,
+          (event) => `
+      <div class="event-card">
+        <strong>${event.year}年 ： </strong>${event.text}
+        <a href="${event.pages[0].content_urls.desktop.page}" target="_blank">更多</a>
+      </div>
+    `,
         )
         .join("");
     } else {

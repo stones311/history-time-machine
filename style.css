@@ -130,11 +130,43 @@ body.history {
 .second-box #today-date {
   font-size: clamp(1.2rem, 2vw, 1.4rem); /* 字體大小隨視窗大小變化*/
   color: #4a3422; /* 文字顏色 */
-  margin-bottom: -5px; /* 與下一段文字距離 */
+  margin-bottom: 15px; /* 與下一段文字距離 */
   padding: 0.5rem 0.5rem; /* 內距 */
   border: 0.5px solid black; /* 框線 */
   border-radius: 8px; /* 框線圓角化 */
   letter-spacing: 1px; /* 字距 */
+}
+
+#today-date {
+  display: flex; /* 啟用彈性排版 */
+  align-items: center; /* 垂直置中 */
+  gap: 10px; /* 選單與標籤之間的間距 */
+}
+
+#today-date label {
+  font-weight: bold; /* 標籤文字加粗 */
+  color: #4a3422; /* 標籤文字顏色 */
+}
+
+#today-date select {
+  padding: 6px 10px; /* 選單內距 */
+  border-radius: 8px; /* 選單邊角圓弧化 */
+  border: 1px solid #aaa; /* 選單邊框顏色 */
+  background-color: #f9f9f9; /* 選單背景顏色 */
+  font-size: 1rem; /* 選單文字大小 */
+  cursor: pointer; /* 滑鼠移到選單上時變成手指圖示 */
+}
+
+#today-date select:hover {
+  border-color: #333; /* 滑鼠懸停時改變邊框顏色 */
+}
+
+#selected-date {
+  font-size: clamp(1rem, 1.8vw, 1.2rem); /* 字體大小隨視窗大小變化 */
+  color: #6a4c2f; /* 顏色與整體風格一致 */
+  margin: 0.5rem 0; /* 與上下元素保持距離 */
+  text-align: center; /* 置中顯示 */
+  font-weight: bold; /* 加粗讓日期更明顯 */
 }
 
 .second-box .wordtwo {
